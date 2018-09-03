@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05ACF4D0-EAC1-40A2-AC64-BD1B5C5FF226}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PicoSystem.Framework</RootNamespace>
+    <AssemblyName>PicoSystem.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\SoLoud.cs" />
+    <Compile Include="Common\Alignment.cs" />
+    <Compile Include="Common\Calculate.cs" />
+    <Compile Include="Common\Color.cs" />
+    <Compile Include="Common\Matrix4.cs" />
+    <Compile Include="Common\Point.cs" />
+    <Compile Include="Common\Random.cs" />
+    <Compile Include="Common\Rect.cs" />
+    <Compile Include="Common\RectF.cs" />
+    <Compile Include="Common\Size.cs" />
+    <Compile Include="Common\SizeF.cs" />
+    <Compile Include="Common\Transform2D.cs" />
+    <Compile Include="Common\Vector2.cs" />
+    <Compile Include="Common\Vector3.cs" />
+    <Compile Include="Common\Vector4.cs" />
+    <Compile Include="Content\AssetData.cs" />
+    <Compile Include="Content\AssetLoader.cs" />
+    <Compile Include="Content\AssetPack.cs" />
+    <Compile Include="Content\ScriptLoader.cs" />
+    <Compile Include="Content\ScriptData.cs" />
+    <Compile Include="GameToolkit\Animation\Ease.cs" />
+    <Compile Include="GameToolkit\Animation\EaseTargetInfo.cs" />
+    <Compile Include="GameToolkit\Animation\Lerper.cs" />
+    <Compile Include="GameToolkit\Animation\Tween.cs" />
+    <Compile Include="GameToolkit\Animation\Tweener.cs" />
+    <Compile Include="GameToolkit\UI\PicoGui.cs" />
+    <Compile Include="Graphics\Font.cs" />
+    <Compile Include="Graphics\Resource.cs" />
+    <Compile Include="Graphics\PicoSurface.cs" />
+    <Compile Include="Input\Gamepad\Gamepad.cs" />
+    <Compile Include="Input\Gamepad\GamepadButton.cs" />
+    <Compile Include="Input\Gamepad\GamepadCapabilities.cs" />
+    <Compile Include="Input\Gamepad\GamepadDeadZoneMode.cs" />
+    <Compile Include="Input\Gamepad\GamepadState.cs" />
+    <Compile Include="Input\Gamepad\GamepadThumbsticks.cs" />
+    <Compile Include="Input\Gamepad\GamePadTriggers.cs" />
+    <Compile Include="Input\Mouse\MouseButton.cs" />
+    <Compile Include="Input\Mouse\MouseState.cs" />
+    <Compile Include="Graphics\Pixmap.cs" />
+    <Compile Include="PicoGame.cs" />
+    <Compile Include="Graphics\PicoGfx.cs" />
+    <Compile Include="Input\Keyboard\Key.cs" />
+    <Compile Include="Input\Keyboard\KeyboardState.cs" />
+    <Compile Include="Input\PicoInput.cs" />
+    <Compile Include="Platform\PicoPlatform.cs" />
+    <Compile Include="Platform\PicoPlatform.Display.cs" />
+    <Compile Include="Platform\PicoPlatform.GamePad.cs" />
+    <Compile Include="Platform\PicoPlatform.Keyboard.cs" />
+    <Compile Include="Platform\PicoPlatform.Mouse.cs" />
+    <Compile Include="Platform\SDL2\LPUtf8StrMarshaler.cs" />
+    <Compile Include="Platform\SDL2\SDL2.cs" />
+    <Compile Include="Platform\SDL2\SDL2Image.cs" />
+    <Compile Include="Platform\SDL2\SDL2ImageHelpers.cs" />
+    <Compile Include="Platform\SDL2\SDL2Mixer.cs" />
+    <Compile Include="Platform\STB\Image.cs" />
+    <Compile Include="Platform\STB\ImageReader.cs" />
+    <Compile Include="Platform\STB\ImageWriter.cs" />
+    <Compile Include="Platform\STB\Operations.cs" />
+    <Compile Include="Platform\STB\PinnedArray.cs" />
+    <Compile Include="Platform\STB\Stb.Dxt.cs" />
+    <Compile Include="Platform\STB\Stb.Dxt.Generated.cs" />
+    <Compile Include="Platform\STB\Stb.Image.cs" />
+    <Compile Include="Platform\STB\Stb.Image.Generated.cs" />
+    <Compile Include="Platform\STB\Stb.ImageResize.cs" />
+    <Compile Include="Platform\STB\Stb.ImageResize.Generated.cs" />
+    <Compile Include="Platform\STB\Stb.ImageWrite.cs" />
+    <Compile Include="Platform\STB\Stb.ImageWrite.Generated.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripting\PicoScript.cs" />
+    <Compile Include="Serialization\BinarySerializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedContent\Files\gamecontrollerdb.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedContent\Images\font1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
